@@ -1,0 +1,29 @@
+<p>
+  new-cmp works!
+</p>
+<p>
+  {{newcomponent | lowercase}}
+</p>
+
+<div> Months :
+  <select (change) = "changemonths($event)">
+     <option *ngFor="let i of months">{{i}}</option>
+  </select>
+</div>
+
+<b>{{todaydate}}</b><br/>
+<b>Square root of 25 is: {{25 | sqrt}}</b><br/>
+<b>Square root of 729 is: {{729 | sqrt}}</b>
+
+<div>
+  <span *ngIf="isavailable; else condition1">Condition is valid.</span>
+  <ng-template #condition1>Condition is invalid</ng-template>
+</div>
+
+<button (click)="myClickFunction($event)">
+  Click Me
+</button>
+
+<ul *ngFor = "let data of httpdata">
+  <li>Name : {{data.name}} Address: {{data.address.city}}</li>
+</ul>
